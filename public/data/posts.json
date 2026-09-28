@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "sample-rice-bowl",
+      "dummy": true,
+      "date": "2026-09-27",
+      "title": "Sample: rice, egg and greens bowl",
+      "summary": "Placeholder post. A basic bowl built from three blocks: a grain, a protein and something green.",
+      "image": "images/dummy-1.svg",
+      "prepMinutes": 15,
+      "tags": ["building blocks", "bowl"]
+    },
+    {
+      "id": "sample-sheet-pan",
+      "dummy": true,
+      "date": "2026-09-24",
+      "title": "Sample: one-tray chicken and veg",
+      "summary": "Placeholder post. Chop, season, one tray in the oven, done. Real write-up coming soon.",
+      "image": "images/dummy-2.svg",
+      "prepMinutes": 10,
+      "tags": ["meal prep", "oven"]
+    },
+    {
+      "id": "sample-dhal",
+      "dummy": true,
+      "date": "2026-09-20",
+      "title": "Sample: easy lentil dhal",
+      "summary": "Placeholder post. A cheap, filling base that keeps well in the fridge for a few days.",
+      "image": "images/dummy-3.svg",
+      "prepMinutes": 20,
+      "tags": ["protein", "batch cook"]
+    },
+    {
+      "id": "sample-oats",
+      "dummy": true,
+      "date": "2026-09-16",
+      "title": "Sample: overnight oats base",
+      "summary": "Placeholder post. Mix the night before, add fruit in the morning. Real photos soon.",
+      "image": "images/dummy-4.svg",
+      "prepMinutes": 5,
+      "tags": ["breakfast", "no cook"]
+    }
+  ]
+}

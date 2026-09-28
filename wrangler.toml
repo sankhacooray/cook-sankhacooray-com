@@ -1,0 +1,15 @@
+# cook — static site served by a Cloudflare Worker (assets only, no script).
+# Pages would also work, but our API tokens only carry Workers permissions.
+# Deploy: npx wrangler deploy
+name = "cook"
+compatibility_date = "2026-09-01"
+
+workers_dev = true
+
+[assets]
+directory = "./public"
+
+# Auto-provisions the DNS record in the sankhacooray.com zone.
+[[routes]]
+pattern = "cook.sankhacooray.com"
+custom_domain = true

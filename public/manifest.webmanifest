@@ -1,0 +1,10 @@
+{
+  "name": "cook — Sankha Cooray",
+  "short_name": "cook",
+  "description": "Cooking experiments: simple, healthy meals from basic building blocks.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f6ef",
+  "theme_color": "#4f7a2e",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

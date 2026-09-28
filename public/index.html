@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>cook — Sankha Cooray · cooking experiments</title>
+<meta name="description" content="My simple food blog. Healthy, tasty meals made from basic building blocks that are easy to prep — cooking experiments from Singapore.">
+<link rel="canonical" href="https://cook.sankhacooray.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="cook">
+<meta property="og:title" content="cook — Sankha Cooray · cooking experiments">
+<meta property="og:description" content="My simple food blog. Healthy, tasty meals made from basic building blocks that are easy to prep.">
+<meta property="og:url" content="https://cook.sankhacooray.com/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#f8f6ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11130e" media="(prefers-color-scheme: dark)">
+
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script>(function(){try{var t=localStorage.getItem("sc-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<style>
+:root {
+    --bg: #f8f6ef;
+    --surface: #ffffff;
+    --surface2: #efece0;
+    --border: #e0dccb;
+    --text: #1f2318;
+    --text-dim: #555b48;
+    --text-muted: #8b8f7c;
+    --accent: #4f7a2e;
+    --accent-dim: #a9c48f;
+    --accent-soft: #4f7a2e14;
+    --warn: #a3621a;
+    --warn-soft: #a3621a14;
+    --header-bg: #f8f6efcc;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --maxw: 1080px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11130e;
+    --surface: #181b14;
+    --surface2: #21251b;
+    --border: #323727;
+    --text: #eef0e6;
+    --text-dim: #bcc2ab;
+    --text-muted: #80866f;
+    --accent: #9cc873;
+    --accent-dim: #5e8040;
+    --accent-soft: #9cc87314;
+    --warn: #e0a55c;
+    --warn-soft: #e0a55c14;
+    --header-bg: #11130eb3;
+  }
+}
+:root[data-theme="dark"] {
+    --bg: #11130e;
+    --surface: #181b14;
+    --surface2: #21251b;
+    --border: #323727;
+    --text: #eef0e6;
+    --text-dim: #bcc2ab;
+    --text-muted: #80866f;
+    --accent: #9cc873;
+    --accent-dim: #5e8040;
+    --accent-soft: #9cc87314;
+    --warn: #e0a55c;
+    --warn-soft: #e0a55c14;
+    --header-bg: #11130eb3;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(800px 400px at 18% -10%, #9cc87312, transparent 60%),
+    radial-gradient(700px 500px at 100% 15%, #e0a55c0d, transparent 60%);
+}
+a { color: inherit; text-decoration: none; }
+
+.site-header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); background: var(--header-bg); border-bottom: 1px solid var(--border); }
+.site-header .inner { max-width: var(--maxw); margin: 0 auto; padding: 18px 28px; display: flex; align-items: center; gap: 32px; }
+.brand { display: flex; align-items: baseline; gap: 10px; }
+.brand-mark { font-family: 'Instrument Serif', serif; font-size: 28px; color: var(--accent); letter-spacing: -0.5px; }
+.brand-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; }
+.nav { margin-left: auto; display: flex; gap: 24px; font-size: 14px; color: var(--text-dim); }
+.nav a:hover { color: var(--text); }
+@media (max-width: 640px) { .nav { display: none; } .brand-tag { display: none; } }
+
+.hero { max-width: var(--maxw); margin: 0 auto; padding: 100px 28px 60px; }
+.eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 24px; }
+.hero h1 { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(40px, 7vw, 72px); line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 24px; max-width: 17ch; }
+.hero p { font-size: clamp(17px, 2.2vw, 20px); color: var(--text-dim); max-width: 58ch; }
+
+.section { max-width: var(--maxw); margin: 0 auto; padding: 20px 28px 80px; }
+.section-label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 22px; display: flex; align-items: center; gap: 12px; }
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+.story { max-width: 64ch; font-size: 17px; color: var(--text-dim); }
+.story p + p { margin-top: 18px; }
+.story strong { color: var(--text); font-weight: 600; }
+
+.notice { display: flex; gap: 10px; align-items: center; font-size: 14px; color: var(--warn); background: var(--warn-soft); border: 1px dashed var(--warn); border-radius: var(--radius-sm); padding: 10px 14px; margin-bottom: 20px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: border-color .18s, background .18s; }
+.card:hover { border-color: var(--accent-dim); background: var(--surface2); }
+.card .photo { position: relative; aspect-ratio: 4 / 3; background: var(--surface2); }
+.card .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card .dummy-tag { position: absolute; top: 10px; left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; padding: 4px 9px; border-radius: 100px; color: #fff; background: #000000a0; }
+.card .body { padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 8px; }
+.card .meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+.card h3 { font-family: 'Instrument Serif', serif; font-size: 25px; font-weight: 400; letter-spacing: -0.3px; line-height: 1.15; }
+.card p { font-size: 15px; color: var(--text-dim); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.chip { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; padding: 4px 9px; border-radius: 100px; color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent-dim); }
+
+.places { list-style: none; display: grid; gap: 10px; max-width: 720px; }
+.places li { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 18px; }
+.places .name { font-weight: 600; }
+.places .area { font-size: 13px; color: var(--text-muted); }
+.places .why { font-size: 15px; color: var(--text-dim); margin-top: 4px; }
+.empty { color: var(--text-muted); font-size: 15px; border: 1px dashed var(--border); border-radius: var(--radius-sm); padding: 18px; max-width: 720px; }
+
+.theme-toggle { margin-left: auto; flex: 0 0 auto; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px; border: 1px solid var(--border); background: transparent; color: var(--text-dim); cursor: pointer; transition: color .18s, border-color .18s, background .18s; }
+.nav + .theme-toggle { margin-left: 0; }
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent-dim); background: var(--surface2); }
+.theme-toggle svg { display: block; }
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; } :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; } }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
+@media (max-width: 640px) {
+  .site-header .inner, .hero, .section { padding-left: 16px; padding-right: 16px; }
+  .hero { padding-top: 64px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="/">
+      <span class="brand-mark">cook</span>
+      <span class="brand-tag">sankhacooray.com</span>
+    </a>
+    <nav class="nav">
+      <a href="#story">Story</a>
+      <a href="#experiments">Experiments</a>
+      <a href="#places">Places</a>
+      <a href="https://sankhacooray.com">Home</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">cooking experiments</div>
+  <h1>Simple food, made from basic building blocks.</h1>
+  <p>My small food blog. Healthy, tasty meals that are easy to prep, plus some notes on nutrition along the way.</p>
+</section>
+
+<section class="section" id="story">
+  <div class="section-label">Long story short</div>
+  <div class="story">
+    <p>I never used to cook. Back home, my parents did all the cooking for me, right up until I moved abroad.</p>
+    <p>In Singapore, cooking at home doesn't save you much compared to buying food. The harder part is eating healthy. Here (and in a lot of other countries), "healthy" is often a marketing angle, so it costs more. Still, you can find decent places with a good balance between cheap and healthy. With a busy schedule, I didn't cook for about four years. I just bought food from a few places I trusted.</p>
+    <p>Recently I started cooking. I call these my <strong>cooking experiments</strong>. I think like a designer, I build things as a developer, and I like to tinker. So I put meals together from very basic, easy building blocks that are healthy, tasty and quick to prep.</p>
+    <p>This page is where I'll share that food journey. Don't expect fancy or unique dishes (maybe I'll get there over time). It's just my simple blog on food and nutrition.</p>
+  </div>
+</section>
+
+<section class="section" id="experiments">
+  <div class="section-label">Cooking experiments</div>
+  <div class="notice" id="dummy-notice" hidden>These are dummy images and sample posts. Real food is coming soon.</div>
+  <div class="grid" id="posts"></div>
+  <p class="empty" id="posts-empty" hidden>No experiments posted yet. Coming soon.</p>
+</section>
+
+<section class="section" id="places">
+  <div class="section-label">Places I recommend</div>
+  <ul class="places" id="places-list"></ul>
+  <p class="empty" id="places-empty" hidden>Nothing here yet. I'll add the places I actually go to soon.</p>
+</section>
+
+<div id="scn-footer"></div>
+<script async src="https://cdn.sankhacooray.com/js/sankha-footer.js?v=20260902"
+        data-site="cook.sankhacooray.com"
+        data-tagline="cooking experiments"></script>
+
+<script>
+(function () {
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function fmtDate(d) { var t = new Date(d); return isNaN(t) ? '' : t.toLocaleDateString('en-SG', { day: 'numeric', month: 'short', year: 'numeric' }); }
+  function load(url) { return fetch(url + '?t=' + Date.now()).then(function (r) { return r.ok ? r.json() : { items: [] }; }).catch(function () { return { items: [] }; }); }
+
+  load('data/posts.json').then(function (db) {
+    var items = (db.items || []).slice().sort(function (a, b) { return (b.date || '').localeCompare(a.date || ''); });
+    var grid = document.getElementById('posts');
+    if (!items.length) { document.getElementById('posts-empty').hidden = false; return; }
+    if (items.some(function (p) { return p.dummy; })) document.getElementById('dummy-notice').hidden = false;
+    grid.innerHTML = items.map(function (p) {
+      return '<article class="card">' +
+        '<div class="photo"><img loading="lazy" src="' + esc(p.image) + '" alt="' + esc(p.dummy ? 'Dummy image, real food coming soon' : p.title) + '">' +
+          (p.dummy ? '<span class="dummy-tag">dummy image</span>' : '') + '</div>' +
+        '<div class="body">' +
+          '<div class="meta">' + esc(fmtDate(p.date)) + (p.prepMinutes ? ' · ' + esc(p.prepMinutes) + ' min prep' : '') + '</div>' +
+          '<h3>' + esc(p.title) + '</h3>' +
+          '<p>' + esc(p.summary) + '</p>' +
+          (p.tags && p.tags.length ? '<div class="tags">' + p.tags.map(function (t) { return '<span class="chip">' + esc(t) + '</span>'; }).join('') + '</div>' : '') +
+        '</div></article>';
+    }).join('');
+  });
+
+  load('data/places.json').then(function (db) {
+    var items = db.items || [];
+    var list = document.getElementById('places-list');
+    if (!items.length) { document.getElementById('places-empty').hidden = false; return; }
+    list.innerHTML = items.map(function (p) {
+      return '<li><div class="name">' + esc(p.name) + '</div>' +
+        (p.area ? '<div class="area">' + esc(p.area) + '</div>' : '') +
+        (p.why ? '<div class="why">' + esc(p.why) + '</div>' : '') + '</li>';
+    }).join('');
+  });
+})();
+</script>
+
+<script>(function(){var r=document.documentElement,K="sc-theme",mq=window.matchMedia("(prefers-color-scheme: dark)");function eff(){try{var s=localStorage.getItem(K);if(s==="light"||s==="dark")return s;}catch(e){}return mq.matches?"dark":"light";}function wire(){var b=document.getElementById("theme-toggle");if(!b)return;b.addEventListener("click",function(){var n=eff()==="dark"?"light":"dark";try{localStorage.setItem(K,n);}catch(e){}r.setAttribute("data-theme",n);window.dispatchEvent(new CustomEvent("sc-themechange",{detail:n}));});}try{if(mq.addEventListener)mq.addEventListener("change",function(){try{if(!localStorage.getItem(K))window.dispatchEvent(new CustomEvent("sc-themechange"));}catch(e){}});}catch(e){}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",wire);else wire();})();</script>
+</body>
+</html>

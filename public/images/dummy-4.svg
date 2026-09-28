@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#e3ece8"/>
+  <ellipse cx="400" cy="290" rx="190" ry="190" fill="#ffffff" opacity=".75"/>
+  <ellipse cx="400" cy="290" rx="140" ry="140" fill="#b5d3c7"/>
+  <circle cx="355" cy="250" r="34" fill="#3f7d6a" opacity=".85"/>
+  <circle cx="440" cy="240" r="26" fill="#3f7d6a" opacity=".6"/>
+  <circle cx="430" cy="330" r="40" fill="#3f7d6a" opacity=".45"/>
+  <circle cx="360" cy="335" r="22" fill="#ffffff" opacity=".7"/>
+  <text x="400" y="540" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="22" letter-spacing="3" fill="#3f7d6a">DUMMY IMAGE · REAL FOOD COMING SOON</text>
+</svg>
