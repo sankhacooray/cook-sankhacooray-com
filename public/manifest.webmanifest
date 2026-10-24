@@ -1,10 +1,42 @@
 {
+  "id": "/",
   "name": "cook — Sankha Cooray",
   "short_name": "cook",
-  "description": "Cooking experiments: simple, healthy meals from basic building blocks.",
+  "description": "My simple food blog. Healthy, tasty meals made from basic building blocks that are easy to prep — cooking experiments from Singapore.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#f8f6ef",
-  "theme_color": "#4f7a2e",
-  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+  "theme_color": "#f8f6ef",
+  "lang": "en",
+  "categories": [
+    "food",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
 }
