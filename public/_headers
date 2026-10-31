@@ -1,0 +1,7 @@
+# Images and icons: not fingerprinted, so a moderate 30-day TTL. HTML and data/*.json keep the default.
+/*.png
+  Cache-Control: public, max-age=2592000
+/*.svg
+  Cache-Control: public, max-age=2592000
+/images/*
+  Cache-Control: public, max-age=2592000
