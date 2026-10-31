@@ -3,5 +3,3 @@
   Cache-Control: public, max-age=2592000
 /*.svg
   Cache-Control: public, max-age=2592000
-/images/*
-  Cache-Control: public, max-age=2592000
